@@ -3,52 +3,52 @@ part of tasks_v1_api_client;
 class Task {
 
   /** Completion date of the task (as a RFC 3339 timestamp). This field is omitted if the task has not been completed. */
-  String completed;
+  core.String completed;
 
   /** Flag indicating whether the task has been deleted. The default if False. */
-  bool deleted;
+  core.bool deleted;
 
   /** Due date of the task (as a RFC 3339 timestamp). Optional. */
-  String due;
+  core.String due;
 
   /** ETag of the resource. */
-  String etag;
+  core.String etag;
 
   /** Flag indicating whether the task is hidden. This is the case if the task had been marked completed when the task list was last cleared. The default is False. This field is read-only. */
-  bool hidden;
+  core.bool hidden;
 
   /** Task identifier. */
-  String id;
+  core.String id;
 
   /** Type of the resource. This is always "tasks#task". */
-  String kind;
+  core.String kind;
 
   /** Collection of links. This collection is read-only. */
-  List<TaskLinks> links;
+  core.List<TaskLinks> links;
 
   /** Notes describing the task. Optional. */
-  String notes;
+  core.String notes;
 
   /** Parent task identifier. This field is omitted if it is a top-level task. This field is read-only. Use the "move" method to move the task under a different parent or to the top level. */
-  String parent;
+  core.String parent;
 
   /** String indicating the position of the task among its sibling tasks under the same parent task or at the top level. If this string is greater than another task's corresponding position string according to lexicographical ordering, the task is positioned after the other task under the same parent task (or at the top level). This field is read-only. Use the "move" method to move the task to another position. */
-  String position;
+  core.String position;
 
   /** URL pointing to this task. Used to retrieve, update, or delete this task. */
-  String selfLink;
+  core.String selfLink;
 
   /** Status of the task. This is either "needsAction" or "completed". */
-  String status;
+  core.String status;
 
   /** Title of the task. */
-  String title;
+  core.String title;
 
   /** Last modification time of the task (as a RFC 3339 timestamp). */
-  String updated;
+  core.String updated;
 
   /** Create new Task from JSON data */
-  Task.fromJson(Map json) {
+  Task.fromJson(core.Map json) {
     if (json.containsKey("completed")) {
       completed = json["completed"];
     }
@@ -100,8 +100,8 @@ class Task {
   }
 
   /** Create JSON Object for Task */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (completed != null) {
       output["completed"] = completed;
@@ -125,7 +125,7 @@ class Task {
       output["kind"] = kind;
     }
     if (links != null) {
-      output["links"] = new List();
+      output["links"] = new core.List();
       links.forEach((item) {
         output["links"].add(item.toJson());
       });
@@ -156,23 +156,23 @@ class Task {
   }
 
   /** Return String representation of Task */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class TaskLinks {
 
   /** The description. In HTML speak: Everything between <a> and </a>. */
-  String description;
+  core.String description;
 
   /** The URL. */
-  String link;
+  core.String link;
 
   /** Type of the link, e.g. "email". */
-  String type;
+  core.String type;
 
   /** Create new TaskLinks from JSON data */
-  TaskLinks.fromJson(Map json) {
+  TaskLinks.fromJson(core.Map json) {
     if (json.containsKey("description")) {
       description = json["description"];
     }
@@ -185,8 +185,8 @@ class TaskLinks {
   }
 
   /** Create JSON Object for TaskLinks */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (description != null) {
       output["description"] = description;
@@ -202,32 +202,32 @@ class TaskLinks {
   }
 
   /** Return String representation of TaskLinks */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class TaskList {
 
   /** ETag of the resource. */
-  String etag;
+  core.String etag;
 
   /** Task list identifier. */
-  String id;
+  core.String id;
 
   /** Type of the resource. This is always "tasks#taskList". */
-  String kind;
+  core.String kind;
 
   /** URL pointing to this task list. Used to retrieve, update, or delete this task list. */
-  String selfLink;
+  core.String selfLink;
 
   /** Title of the task list. */
-  String title;
+  core.String title;
 
   /** Last modification time of the task list (as a RFC 3339 timestamp). */
-  String updated;
+  core.String updated;
 
   /** Create new TaskList from JSON data */
-  TaskList.fromJson(Map json) {
+  TaskList.fromJson(core.Map json) {
     if (json.containsKey("etag")) {
       etag = json["etag"];
     }
@@ -249,8 +249,8 @@ class TaskList {
   }
 
   /** Create JSON Object for TaskList */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (etag != null) {
       output["etag"] = etag;
@@ -275,26 +275,26 @@ class TaskList {
   }
 
   /** Return String representation of TaskList */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class TaskLists {
 
   /** ETag of the resource. */
-  String etag;
+  core.String etag;
 
   /** Collection of task lists. */
-  List<TaskList> items;
+  core.List<TaskList> items;
 
   /** Type of the resource. This is always "tasks#taskLists". */
-  String kind;
+  core.String kind;
 
   /** Token that can be used to request the next page of this result. */
-  String nextPageToken;
+  core.String nextPageToken;
 
   /** Create new TaskLists from JSON data */
-  TaskLists.fromJson(Map json) {
+  TaskLists.fromJson(core.Map json) {
     if (json.containsKey("etag")) {
       etag = json["etag"];
     }
@@ -313,14 +313,14 @@ class TaskLists {
   }
 
   /** Create JSON Object for TaskLists */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (etag != null) {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new List();
+      output["items"] = new core.List();
       items.forEach((item) {
         output["items"].add(item.toJson());
       });
@@ -336,26 +336,26 @@ class TaskLists {
   }
 
   /** Return String representation of TaskLists */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class Tasks {
 
   /** ETag of the resource. */
-  String etag;
+  core.String etag;
 
   /** Collection of tasks. */
-  List<Task> items;
+  core.List<Task> items;
 
   /** Type of the resource. This is always "tasks#tasks". */
-  String kind;
+  core.String kind;
 
   /** Token used to access the next page of this result. */
-  String nextPageToken;
+  core.String nextPageToken;
 
   /** Create new Tasks from JSON data */
-  Tasks.fromJson(Map json) {
+  Tasks.fromJson(core.Map json) {
     if (json.containsKey("etag")) {
       etag = json["etag"];
     }
@@ -374,14 +374,14 @@ class Tasks {
   }
 
   /** Create JSON Object for Tasks */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (etag != null) {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new List();
+      output["items"] = new core.List();
       items.forEach((item) {
         output["items"].add(item.toJson());
       });
@@ -397,7 +397,7 @@ class Tasks {
   }
 
   /** Return String representation of Tasks */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 

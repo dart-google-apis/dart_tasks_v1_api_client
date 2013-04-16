@@ -12,13 +12,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete(String tasklist, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete(core.String tasklist, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists/{tasklist}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (tasklist == null) paramErrors.add("tasklist is required");
     if (tasklist != null) urlParams["tasklist"] = tasklist;
     if (optParams != null) {
@@ -49,13 +49,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<TaskList> get(String tasklist, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<TaskList> get(core.String tasklist, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists/{tasklist}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (tasklist == null) paramErrors.add("tasklist is required");
     if (tasklist != null) urlParams["tasklist"] = tasklist;
     if (optParams != null) {
@@ -86,13 +86,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<TaskList> insert(TaskList request, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<TaskList> insert(TaskList request, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -123,13 +123,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<TaskLists> list({String maxResults, String pageToken, Map optParams}) {
-    var completer = new Completer();
+  async.Future<TaskLists> list({core.String maxResults, core.String pageToken, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (maxResults != null) queryParams["maxResults"] = maxResults;
     if (pageToken != null) queryParams["pageToken"] = pageToken;
     if (optParams != null) {
@@ -162,13 +162,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<TaskList> patch(TaskList request, String tasklist, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<TaskList> patch(TaskList request, core.String tasklist, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists/{tasklist}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (tasklist == null) paramErrors.add("tasklist is required");
     if (tasklist != null) urlParams["tasklist"] = tasklist;
     if (optParams != null) {
@@ -201,13 +201,13 @@ class TasklistsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<TaskList> update(TaskList request, String tasklist, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<TaskList> update(TaskList request, core.String tasklist, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "users/@me/lists/{tasklist}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (tasklist == null) paramErrors.add("tasklist is required");
     if (tasklist != null) urlParams["tasklist"] = tasklist;
     if (optParams != null) {
@@ -244,13 +244,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> clear(String tasklist, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> clear(core.String tasklist, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/clear";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (tasklist == null) paramErrors.add("tasklist is required");
     if (tasklist != null) urlParams["tasklist"] = tasklist;
     if (optParams != null) {
@@ -283,13 +283,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete(String tasklist, String task, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete(core.String tasklist, core.String task, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks/{task}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (task == null) paramErrors.add("task is required");
     if (task != null) urlParams["task"] = task;
     if (tasklist == null) paramErrors.add("tasklist is required");
@@ -324,13 +324,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Task> get(String tasklist, String task, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Task> get(core.String tasklist, core.String task, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks/{task}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (task == null) paramErrors.add("task is required");
     if (task != null) urlParams["task"] = task;
     if (tasklist == null) paramErrors.add("tasklist is required");
@@ -369,13 +369,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Task> insert(Task request, String tasklist, {String parent, String previous, Map optParams}) {
-    var completer = new Completer();
+  async.Future<Task> insert(Task request, core.String tasklist, {core.String parent, core.String previous, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (parent != null) queryParams["parent"] = parent;
     if (previous != null) queryParams["previous"] = previous;
     if (tasklist == null) paramErrors.add("tasklist is required");
@@ -428,13 +428,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Tasks> list(String tasklist, {String completedMax, String completedMin, String dueMax, String dueMin, String maxResults, String pageToken, bool showCompleted, bool showDeleted, bool showHidden, String updatedMin, Map optParams}) {
-    var completer = new Completer();
+  async.Future<Tasks> list(core.String tasklist, {core.String completedMax, core.String completedMin, core.String dueMax, core.String dueMin, core.String maxResults, core.String pageToken, core.bool showCompleted, core.bool showDeleted, core.bool showHidden, core.String updatedMin, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (completedMax != null) queryParams["completedMax"] = completedMax;
     if (completedMin != null) queryParams["completedMin"] = completedMin;
     if (dueMax != null) queryParams["dueMax"] = dueMax;
@@ -481,13 +481,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Task> move(String tasklist, String task, {String parent, String previous, Map optParams}) {
-    var completer = new Completer();
+  async.Future<Task> move(core.String tasklist, core.String task, {core.String parent, core.String previous, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks/{task}/move";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (parent != null) queryParams["parent"] = parent;
     if (previous != null) queryParams["previous"] = previous;
     if (task == null) paramErrors.add("task is required");
@@ -526,13 +526,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Task> patch(Task request, String tasklist, String task, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Task> patch(Task request, core.String tasklist, core.String task, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks/{task}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (task == null) paramErrors.add("task is required");
     if (task != null) urlParams["task"] = task;
     if (tasklist == null) paramErrors.add("tasklist is required");
@@ -569,13 +569,13 @@ class TasksResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Task> update(Task request, String tasklist, String task, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Task> update(Task request, core.String tasklist, core.String task, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks/{task}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (task == null) paramErrors.add("task is required");
     if (task != null) urlParams["task"] = task;
     if (tasklist == null) paramErrors.add("tasklist is required");
