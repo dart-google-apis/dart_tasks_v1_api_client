@@ -8,7 +8,7 @@ Auto-generated client library for accessing the tasks v1 API.
 
 Lets you manage your tasks and task lists.
 
-Official API documentation: http://code.google.com/apis/tasks/v1/using.html
+Official API documentation: https://developers.google.com/google-apps/tasks/firstapp
 
 For web applications:
 ```
