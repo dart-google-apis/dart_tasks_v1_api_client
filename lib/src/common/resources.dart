@@ -1,8 +1,8 @@
 part of tasks_v1_api_client;
 
-class TasklistsResource extends Resource {
+class TasklistsResource_ extends Resource {
 
-  TasklistsResource(Client client) : super(client) {
+  TasklistsResource_(Client client) : super(client) {
   }
 
   /**
@@ -30,7 +30,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -67,7 +67,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -102,7 +102,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -141,7 +141,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -180,7 +180,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -219,7 +219,7 @@ class TasklistsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -232,9 +232,9 @@ class TasklistsResource extends Resource {
   }
 }
 
-class TasksResource extends Resource {
+class TasksResource_ extends Resource {
 
-  TasksResource(Client client) : super(client) {
+  TasksResource_(Client client) : super(client) {
   }
 
   /**
@@ -262,7 +262,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -303,7 +303,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -344,7 +344,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -389,7 +389,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -456,7 +456,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -503,7 +503,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -546,7 +546,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -589,7 +589,7 @@ class TasksResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 

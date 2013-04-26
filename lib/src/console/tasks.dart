@@ -4,10 +4,10 @@ part of tasks_v1_api_console;
 /** Lets you manage your tasks and task lists. */
 class Tasks extends ConsoleClient {
 
-  TasklistsResource _tasklists;
-  TasklistsResource get tasklists => _tasklists;
-  TasksResource _tasks;
-  TasksResource get tasks => _tasks;
+  TasklistsResource_ _tasklists;
+  TasklistsResource_ get tasklists => _tasklists;
+  TasksResource_ _tasks;
+  TasksResource_ get tasks => _tasks;
 
   /** OAuth Scope2: Manage your tasks */
   static const core.String TASKS_SCOPE = "https://www.googleapis.com/auth/tasks";
@@ -67,7 +67,7 @@ class Tasks extends ConsoleClient {
   Tasks([oauth2.OAuth2Console auth]) : super(auth) {
     basePath = "/tasks/v1/";
     rootUrl = "https://www.googleapis.com:443/";
-    _tasklists = new TasklistsResource(this);
-    _tasks = new TasksResource(this);
+    _tasklists = new TasklistsResource_(this);
+    _tasks = new TasksResource_(this);
   }
 }
