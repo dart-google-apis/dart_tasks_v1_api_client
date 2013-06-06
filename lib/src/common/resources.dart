@@ -123,7 +123,7 @@ class TasklistsResource_ extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  async.Future<TaskLists> list({core.String maxResults, core.String pageToken, core.Map optParams}) {
+  async.Future<TaskLists> list({core.int maxResults, core.String pageToken, core.Map optParams}) {
     var completer = new async.Completer();
     var url = "users/@me/lists";
     var urlParams = new core.Map();
@@ -428,7 +428,7 @@ class TasksResource_ extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  async.Future<Tasks> list(core.String tasklist, {core.String completedMax, core.String completedMin, core.String dueMax, core.String dueMin, core.String maxResults, core.String pageToken, core.bool showCompleted, core.bool showDeleted, core.bool showHidden, core.String updatedMin, core.Map optParams}) {
+  async.Future<Tasks> list(core.String tasklist, {core.String completedMax, core.String completedMin, core.String dueMax, core.String dueMin, core.int maxResults, core.String pageToken, core.bool showCompleted, core.bool showDeleted, core.bool showHidden, core.String updatedMin, core.Map optParams}) {
     var completer = new async.Completer();
     var url = "lists/{tasklist}/tasks";
     var urlParams = new core.Map();

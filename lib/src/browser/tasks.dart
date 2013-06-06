@@ -66,7 +66,7 @@ class Tasks extends BrowserClient {
 
   Tasks([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/tasks/v1/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _tasklists = new TasklistsResource_(this);
     _tasks = new TasksResource_(this);
   }

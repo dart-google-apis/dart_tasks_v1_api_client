@@ -66,7 +66,7 @@ class Tasks extends ConsoleClient {
 
   Tasks([oauth2.OAuth2Console auth]) : super(auth) {
     basePath = "/tasks/v1/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _tasklists = new TasklistsResource_(this);
     _tasks = new TasksResource_(this);
   }
