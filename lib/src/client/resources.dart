@@ -1,9 +1,11 @@
-part of tasks_v1_api_client;
+part of tasks_v1_api;
 
-class TasklistsResource_ extends Resource {
+class TasklistsResource_ {
 
-  TasklistsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  TasklistsResource_(Client client) :
+      _client = client;
 
   /**
    * Deletes the authenticated user's specified task list.
@@ -207,10 +209,12 @@ class TasklistsResource_ extends Resource {
   }
 }
 
-class TasksResource_ extends Resource {
+class TasksResource_ {
 
-  TasksResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  TasksResource_(Client client) :
+      _client = client;
 
   /**
    * Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.

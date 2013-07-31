@@ -1,4 +1,4 @@
-part of tasks_v1_api_client;
+part of tasks_v1_api;
 
 class Task {
 
@@ -71,10 +71,7 @@ class Task {
       kind = json["kind"];
     }
     if (json.containsKey("links")) {
-      links = [];
-      json["links"].forEach((item) {
-        links.add(new TaskLinks.fromJson(item));
-      });
+      links = json["links"].map((linksItem) => new TaskLinks.fromJson(linksItem)).toList();
     }
     if (json.containsKey("notes")) {
       notes = json["notes"];
@@ -125,10 +122,7 @@ class Task {
       output["kind"] = kind;
     }
     if (links != null) {
-      output["links"] = new core.List();
-      links.forEach((item) {
-        output["links"].add(item.toJson());
-      });
+      output["links"] = links.map((linksItem) => linksItem.toJson()).toList();
     }
     if (notes != null) {
       output["notes"] = notes;
@@ -299,10 +293,7 @@ class TaskLists {
       etag = json["etag"];
     }
     if (json.containsKey("items")) {
-      items = [];
-      json["items"].forEach((item) {
-        items.add(new TaskList.fromJson(item));
-      });
+      items = json["items"].map((itemsItem) => new TaskList.fromJson(itemsItem)).toList();
     }
     if (json.containsKey("kind")) {
       kind = json["kind"];
@@ -320,10 +311,7 @@ class TaskLists {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new core.List();
-      items.forEach((item) {
-        output["items"].add(item.toJson());
-      });
+      output["items"] = items.map((itemsItem) => itemsItem.toJson()).toList();
     }
     if (kind != null) {
       output["kind"] = kind;
@@ -360,10 +348,7 @@ class Tasks {
       etag = json["etag"];
     }
     if (json.containsKey("items")) {
-      items = [];
-      json["items"].forEach((item) {
-        items.add(new Task.fromJson(item));
-      });
+      items = json["items"].map((itemsItem) => new Task.fromJson(itemsItem)).toList();
     }
     if (json.containsKey("kind")) {
       kind = json["kind"];
@@ -381,10 +366,7 @@ class Tasks {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new core.List();
-      items.forEach((item) {
-        output["items"].add(item.toJson());
-      });
+      output["items"] = items.map((itemsItem) => itemsItem.toJson()).toList();
     }
     if (kind != null) {
       output["kind"] = kind;
@@ -401,3 +383,16 @@ class Tasks {
 
 }
 
+core.Map _mapMap(core.Map source, [core.Object convert(core.Object source) = null]) {
+  assert(source != null);
+  var result = new dart_collection.LinkedHashMap();
+  source.forEach((core.String key, value) {
+    assert(key != null);
+    if(convert == null) {
+      result[key] = value;
+    } else {
+      result[key] = convert(value);
+    }
+  });
+  return result;
+}

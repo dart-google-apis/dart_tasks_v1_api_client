@@ -1,14 +1,20 @@
-library tasks_v1_api_browser;
+library tasks_v1_api.browser;
 
-import "tasks_v1_api_client.dart";
-export "tasks_v1_api_client.dart";
-
-import "dart:core" as core;
-import "dart:html" as html;
-import "dart:async" as async;
-import "dart:json" as JSON;
-import "package:js/js.dart" as js;
 import "package:google_oauth2_client/google_oauth2_browser.dart" as oauth;
 
-part "src/browser/browser_client.dart";
-part "src/browser/tasks.dart";
+import 'package:google_tasks_v1_api/src/cloud_api_browser.dart';
+import "package:google_tasks_v1_api/tasks_v1_api_client.dart";
+
+/** Lets you manage your tasks and task lists. */
+class Tasks extends Client with BrowserClient {
+
+  /** OAuth Scope2: Manage your tasks */
+  static const String TASKS_SCOPE = "https://www.googleapis.com/auth/tasks";
+
+  /** OAuth Scope2: View your tasks */
+  static const String TASKS_READONLY_SCOPE = "https://www.googleapis.com/auth/tasks.readonly";
+
+  final oauth.OAuth2 auth;
+
+  Tasks([oauth.OAuth2 this.auth]);
+}
