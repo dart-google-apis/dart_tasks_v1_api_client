@@ -150,7 +150,7 @@ class Task {
   }
 
   /** Return String representation of Task */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -196,7 +196,7 @@ class TaskLinks {
   }
 
   /** Return String representation of TaskLinks */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -269,7 +269,7 @@ class TaskList {
   }
 
   /** Return String representation of TaskList */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -324,7 +324,7 @@ class TaskLists {
   }
 
   /** Return String representation of TaskLists */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -379,7 +379,7 @@ class Tasks {
   }
 
   /** Return String representation of Tasks */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
