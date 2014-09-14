@@ -6,6 +6,7 @@ import 'package:google_tasks_v1_api/src/browser_client.dart';
 import "package:google_tasks_v1_api/tasks_v1_api_client.dart";
 
 /** Lets you manage your tasks and task lists. */
+@deprecated
 class Tasks extends Client with BrowserClient {
 
   /** OAuth Scope2: Manage your tasks */
